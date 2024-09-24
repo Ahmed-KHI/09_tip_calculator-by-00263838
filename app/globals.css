@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 240 100% 98%; /* Light background */
+        --foreground: 210 40% 20%;  /* Dark foreground */
+
+        --card: 255 255 255; /* White card */
+        --card-foreground: 30 30 30; /* Dark text on cards */
+
+        --primary: 30 100% 50%; /* Bright color for primary actions */
+        --primary-foreground: 0 0% 100%; /* White text on primary */
+
+        --secondary: 220 30% 96%; /* Light secondary color */
+        --secondary-foreground: 30 30% 20%; /* Dark text on secondary */
+
+        --accent: 200 100% 50%; /* Soft accent color */
+        --accent-foreground: 0 0% 100%; /* White text on accents */
+
+        --border: 220 20% 80%; /* Subtle border */
+        --ring: 200 80% 60%; /* Accent ring color */
+        --radius: 0.375rem; /* Rounded corners */
+    }
+
+    .dark {
+        --background: 30 10% 20%; /* Dark background */
+        --foreground: 220 100% 95%; /* Light foreground */
+
+        --card: 40 10% 30%; /* Dark card */
+        --card-foreground: 220 100% 95%; /* Light text on dark cards */
+
+        --primary: 0 80% 60%; /* Bright color for primary actions */
+        --primary-foreground: 210 100% 98%; /* Light text on primary */
+
+        --secondary: 40 50% 30%; /* Dark secondary color */
+        --secondary-foreground: 220 100% 95%; /* Light text on secondary */
+
+        --accent: 200 80% 50%; /* Dark accent color */
+        --accent-foreground: 210 100% 98%; /* Light text on accents */
+
+        --border: 40 20% 50%; /* Darker border */
+        --ring: 200 80% 40%; /* Darker accent ring */
+    }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; /* Bolder headings */
+    text-transform: uppercase; /* Make headings stand out */
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+    button {
+        @apply transition-colors duration-300 ease-in-out; /* Smooth transitions for buttons */
+    }
+}
